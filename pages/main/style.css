@@ -98,6 +98,33 @@ body {
   color: #333333;
 }
 
+.header__nav {
+  position: relative;
+}
+
+.nav__btn {
+  display: none;
+}
+@media screen and (max-width: 640px) {
+  .nav__btn {
+    position: absolute;
+    right: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+    background: none;
+  }
+  .nav__btn svg line {
+    transition-duration: 0.2s;
+  }
+  .nav__btn:hover line {
+    stroke: #4BD8B5;
+  }
+}
+
 .header__nav-list {
   padding-left: 0;
   display: flex;
@@ -120,6 +147,11 @@ body {
 }
 .header__nav-list li:hover {
   transform: scale(1.2);
+}
+@media screen and (max-width: 640px) {
+  .header__nav-list {
+    display: none;
+  }
 }
 
 .header__nav-link {
